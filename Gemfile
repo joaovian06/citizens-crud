@@ -51,6 +51,15 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # factory_bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies
+  gem 'factory_bot_rails'
+
+  # Faker helps you generate realistic test data, and populate your database with more than a couple of records while you're doing development.
+  gem 'faker'
+
+  # rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+  gem 'rspec-rails', '~> 6.1.0'
 end
 
 group :development do
@@ -62,11 +71,13 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Guard::RSpec allows to automatically & intelligently launch specs when files are modified.
+  gem 'guard-rspec', require: false
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality that, 
+  # if written by hand, would be much longer, more complex, and error-prone.
+  gem 'shoulda-matchers', '~> 6.0'
 end
