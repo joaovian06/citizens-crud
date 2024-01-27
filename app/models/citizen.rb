@@ -46,7 +46,7 @@ class Citizen < ApplicationRecord
 
       def valid_cpf?
         if BRDocuments::CPF.invalid?(cpf)
-          errors.add(:cpf, "cpf invalido")
+          errors.add(:cpf, I18n.t('.invalid_cpf'))
         end
       end
 
@@ -67,9 +67,9 @@ class Citizen < ApplicationRecord
 
       def birthdate_allowed_range
         if birthdate && birthdate > Date.today
-          errors.add(:birthdate, "can not be greater than today")
+          errors.add(:birthdate, I18n.t('.not_greater'))
         elsif birthdate && birthdate <= Date.parse("22nd, Apr 1500")
-          errors.add(:birthdate, "can not be less than Brazil age")
+          errors.add(:birthdate, I18n.t('.not_less'))
         end
       end
 end
