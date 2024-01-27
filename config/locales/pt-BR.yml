@@ -1,5 +1,13 @@
 pt-BR:
   activerecord:
     errors:
+      models:
+        address:
+          required: deve estar presente
+          attributes:
+            citizen:
+              blank: Cidadão deve ser preenchido
+        citizen:
+
       messages:
         record_invalid: "A validação falhou: %{errors}"
