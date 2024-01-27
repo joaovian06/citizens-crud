@@ -109,6 +109,7 @@ RSpec.describe Citizen, type: :model do
         let(:valid_cns) { "933282321550009" }
 
         it { is_expected.to validate_presence_of(:cns) }
+        it { is_expected.to validate_uniqueness_of(:cns).case_insensitive }
         it { is_expected.to validate_length_of(:cns).is_equal_to(15) }
         it { is_expected.to allow_value(valid_cns).for(:cns).with_message("Nao segue o padrao para o CNS") }
       end
@@ -152,8 +153,6 @@ RSpec.describe Citizen, type: :model do
 
           it { expect(subject.cpf).to eq(formatted_cpf) }
         end
-
-        
       end
 
       context "#before_validate" do

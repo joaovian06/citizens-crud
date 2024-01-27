@@ -1,6 +1,5 @@
 class Citizen < ApplicationRecord
     NOT_FORMATTED_PHONE_REGEX = %r(\A(\d{2})(\d{2})(\d{4,5})(\d{4})\z)
-    PHONE_REGEX = %r(\A[+](\d{2})\s(\d{2})\s(\d{4,5})[-](\d{4})\z)
 
     before_save :format_cpf
     before_validation :format_phone
@@ -28,7 +27,8 @@ class Citizen < ApplicationRecord
               format: { 
                 with: %r(\A[0-9]{3}[0-9]{4}[0-9]{4}[0-9]{4}),
                 message: "Nao segue o padrao para o CNS"
-              }
+              },
+              uniqueness: true
 
     validates :email,
               presence: true,
