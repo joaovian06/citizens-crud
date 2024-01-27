@@ -43,6 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'brazilian_documents', '~> 0.1.4'
+gem 'validates-correios-cep'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
