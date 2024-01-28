@@ -48,8 +48,11 @@ gem 'validates-correios-cep'
 gem 'html2haml'
 gem "haml-rails", "~> 2.0"
 
+# Bootstrap 5 ruby gem for Ruby on Rails (Sprockets/Importmaps) and Hanami (formerly Lotus).
+gem 'bootstrap', '~> 5.3.2'
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
