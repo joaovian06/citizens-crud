@@ -54,6 +54,8 @@ gem 'bootstrap', '~> 5.3.2'
 # Use Sass to process CSS
 gem "sassc-rails"
 
+gem "font-awesome-sass", "~> 6.1.1"
+
 # Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
 gem 'simple_form'
 

@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "citizens/index", type: :view do
+  let(:citizens) { create_list(:citizen, 10) }
   before(:each) do
-    assign(:citizens, [
-      Citizen.create!(),
-      Citizen.create!()
-    ])
+    assign(:citizens, citizens)
   end
 
   it "renders a list of citizens" do

@@ -19,6 +19,7 @@ pt-BR:
             cns:
               blank: deve ser preenchido
               wrong_length: tamanho incompativel
+              taken: ja utilizado por outro Cidadao
             email:
               blank: deve ser preenchido
               invalid: no formato invalido
