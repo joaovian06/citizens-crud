@@ -4,14 +4,27 @@ RSpec.describe Citizen, type: :model do
   let(:subject) { create(:citizen) }
 
   context "db" do
-    it { is_expected.to have_db_column(:full_name) }
-    it { is_expected.to have_db_column(:cpf) }
-    it { is_expected.to have_db_column(:cns) }
-    it { is_expected.to have_db_column(:email) }
-    it { is_expected.to have_db_column(:birthdate) }
-    it { is_expected.to have_db_column(:phone_number) }
-    it { is_expected.to have_db_column(:avatar) }
-    it { is_expected.to have_db_column(:status) }
+    context "columns" do
+      it { is_expected.to have_db_column(:full_name) }
+      it { is_expected.to have_db_column(:cpf) }
+      it { is_expected.to have_db_column(:cns) }
+      it { is_expected.to have_db_column(:email) }
+      it { is_expected.to have_db_column(:birthdate) }
+      it { is_expected.to have_db_column(:phone_number) }
+      it { is_expected.to have_db_column(:avatar) }
+      it { is_expected.to have_db_column(:status) }
+    end
+
+    context "indexes" do
+      it { is_expected.to have_db_index(:cns) }
+      it { is_expected.to have_db_index(:cpf) }
+      it { is_expected.to have_db_index(:email) }
+      it { is_expected.to have_db_index(:full_name) }
+    end
+  end
+
+  context "associations" do
+    it { is_expected.to have_one(:address) }
   end
 
   context "enum" do
