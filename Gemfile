@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 gem 'brazilian_documents', '~> 0.1.4'
 gem 'validates-correios-cep'
 
+gem 'html2haml'
+gem "haml-rails", "~> 2.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
