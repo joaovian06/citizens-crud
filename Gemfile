@@ -83,6 +83,10 @@ group :development do
 
   # Guard::RSpec allows to automatically & intelligently launch specs when files are modified.
   gem 'guard-rspec', require: false
+
+  # LiveReload guard allows to automatically reload your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem "rack-livereload"
 end
 
 group :test do
