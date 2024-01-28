@@ -7,6 +7,17 @@ FactoryBot.define do
     birthdate { Faker::Date.between(from: '2014-09-23', to: '2014-09-25') }
     phone_number { "5519999999999" }
     avatar { "MyString" }
-    status { 1 }
+    status { "active" }
+
+    trait :invalid_citizen do
+      full_name { nil }
+      cpf { nil }
+      cns { nil }
+      email { nil }
+      birthdate { nil }
+      phone_number { nil }
+      avatar { nil }
+      status { nil }
+    end
   end
 end

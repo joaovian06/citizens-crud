@@ -35,6 +35,14 @@ RSpec.describe Citizen, type: :model do
     context "valid" do
       it { is_expected.to be_valid }
     end
+
+    context "traits" do
+      context "invalid citizen" do
+        let(:subject) { build(:citizen, :invalid_citizen) }
+
+        it { expect(subject.validate).to be_falsy }
+      end
+    end
   end
 
   context "validations" do

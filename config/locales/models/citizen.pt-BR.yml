@@ -8,7 +8,7 @@ pt-BR:
         cpf: CPF
         birthdate: Data de nascimento
         phone_number: Número de telefone
-        status: Situação
+        status: Status
         cns: CNS (Cartão Nacional de Saúde)
         email: E-mail
       citizen/status:

@@ -6,8 +6,28 @@ pt-BR:
           required: deve estar presente
           attributes:
             citizen:
-              blank: Cidadão deve ser preenchido
+              blank: deve ser preenchido
         citizen:
+          attributes:
+            status:
+              blank: deve ser preenchido
+            full_name:
+              blank: deve ser preenchido
+            cpf:
+              blank: deve ser preenchido
+              invalid: invalido
+            cns:
+              blank: deve ser preenchido
+              wrong_length: tamanho incompativel
+            email:
+              blank: deve ser preenchido
+              invalid: no formato invalido
+            birthdate:
+              blank: deve ser preenchida
+            phone_number:
+              blank: deve ser preenchido
+            avatar:
+              blank: deve ser preenchida
 
       messages:
         record_invalid: "A validação falhou: %{errors}"

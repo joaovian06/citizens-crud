@@ -1,0 +1,10 @@
+= form_for @citizen do |f|
+  - if @citizen.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@citizen.errors.count, "error")} prohibited this citizen from being saved:"
+      %ul
+        - @citizen.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'
