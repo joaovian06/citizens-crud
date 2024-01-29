@@ -1,0 +1,20 @@
+.back-button {
+  align-items: center;
+}
+
+.new-citizen {
+  border: 1px solid grey;
+  border-radius: 2rem;
+}
+
+.citizen-form {
+  label {
+    font-weight: 600;
+    display: flex;
+    font-size: 1.25rem;
+  }
+
+  .actions {
+    color: red;
+  }
+}

@@ -1,0 +1,52 @@
+= stylesheet_link_tag("views/citizens/index")
+
+.container-lg
+  .flex-row.my-5
+    .col-xl-auto
+      %h1= t(".citizens")
+
+  .flex-row.mb-5
+    .col-xl-auto
+      = link_to new_citizen_path do
+        %button.btn.btn-outline-primary.btn-lg.new-citizen
+          = icon("fa-solid", "plus", class: "fa-2xl my-3") 
+          #text.fs-2.mt-2 Criar cidadao
+
+  .flex-row.w-100.p-5.citizens-table
+    .col-xl-auto
+      %table.table
+        %thead
+          %tr
+            %th{ scope: "col" } #
+            %th{ scope: "col" }
+              = t(".full_name")
+            %th{ scope: "col" }
+              = t(".email")
+            %th{ scope: "col" }
+              = t(".cpf")
+            %th{ scope: "col" }
+              = t(".phone_number")
+            %th{ scope: "col" }
+              = t(".status")
+            %th{ scope: "col" }
+              = t(".actions")
+
+        %tbody
+          - @citizens.each_with_index do |citizen, index|
+            %tr
+              %th{scope: "row"}
+                = index + 1
+              %td
+                = citizen.full_name
+              %td
+                = citizen.email
+              %td
+                = citizen.cpf
+              %td
+                = citizen.phone_number
+              %td
+                = Citizen.human_attribute_name("status.#{citizen.status}")
+              %td
+                = link_to icon("fa-solid", "magnifying-glass", class: "fa-xl text-success"), citizen
+                = link_to icon("fa-solid", "pen-to-square", class: "fa-xl text-warning"), edit_citizen_path(citizen)
+                = link_to icon("fa-solid", "trash", class: "fa-xl text-danger"), citizen, method: :delete, data: { confirm: 'Are you sure?' }

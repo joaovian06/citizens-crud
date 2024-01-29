@@ -45,8 +45,24 @@ gem "bootsnap", require: false
 gem 'brazilian_documents', '~> 0.1.4'
 gem 'validates-correios-cep'
 
+gem 'html2haml'
+gem "haml-rails", "~> 2.0"
+
+# This gem provides a simple and extremely flexible way to upload files from Ruby applications.
+# It works well with Rack based web applications, such as Ruby on Rails.
+gem 'carrierwave', '~> 3.0'
+gem "mini_magick"
+
+# Bootstrap 5 ruby gem for Ruby on Rails (Sprockets/Importmaps) and Hanami (formerly Lotus).
+gem 'bootstrap', '~> 5.3.2'
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
+
+gem "font-awesome-sass", "~> 6.1.1"
+
+# Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
+gem 'simple_form'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -77,6 +93,10 @@ group :development do
 
   # Guard::RSpec allows to automatically & intelligently launch specs when files are modified.
   gem 'guard-rspec', require: false
+
+  # LiveReload guard allows to automatically reload your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem "rack-livereload"
 end
 
 group :test do

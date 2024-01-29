@@ -1,6 +1,9 @@
 class Citizen < ApplicationRecord
+    mount_uploader :avatar, AvatarUploader
     NOT_FORMATTED_PHONE_REGEX = %r(\A(\d{2})(\d{2})(\d{4,5})(\d{4})\z)
 
+    has_one :address
+    
     before_save :format_cpf
     before_validation :format_phone
 
@@ -26,7 +29,7 @@ class Citizen < ApplicationRecord
               length: { is: 15 },
               format: { 
                 with: %r(\A[0-9]{3}[0-9]{4}[0-9]{4}[0-9]{4}),
-                message: "Nao segue o padrao para o CNS"
+                message: I18n.t(".unformatted")
               },
               uniqueness: true
 
@@ -46,7 +49,7 @@ class Citizen < ApplicationRecord
 
       def valid_cpf?
         if BRDocuments::CPF.invalid?(cpf)
-          errors.add(:cpf, I18n.t('.invalid_cpf'))
+          errors.add(:cpf, I18n.t('.invalid'))
         end
       end
 

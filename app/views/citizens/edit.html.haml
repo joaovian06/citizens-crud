@@ -1,0 +1,10 @@
+= stylesheet_link_tag("views/citizens/edit")
+
+.container-lg  
+  .flex-row.new-citizen.my-5
+    .col
+      %h1.mt-5= t(".edit-citizen")
+
+    .flex-row.p-5.citizen-form
+      .col
+        = render 'form'
