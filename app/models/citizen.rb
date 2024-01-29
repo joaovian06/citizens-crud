@@ -28,7 +28,7 @@ class Citizen < ApplicationRecord
               length: { is: 15 },
               format: { 
                 with: %r(\A[0-9]{3}[0-9]{4}[0-9]{4}[0-9]{4}),
-                message: "Nao segue o padrao para o CNS"
+                message: I18n.t(".unformatted")
               },
               uniqueness: true
 
@@ -48,7 +48,7 @@ class Citizen < ApplicationRecord
 
       def valid_cpf?
         if BRDocuments::CPF.invalid?(cpf)
-          errors.add(:cpf, I18n.t('.invalid_cpf'))
+          errors.add(:cpf, I18n.t('.invalid'))
         end
       end
 

@@ -1,5 +1,10 @@
-%h1 New citizen
+= stylesheet_link_tag("views/citizens/new")
 
-= render 'form'
+.container-lg  
+  .flex-row.new-citizen.my-5
+    .col
+      %h1.mt-5= t(".new-citizen")
 
-= link_to 'Back', citizens_path
+    .flex-row.p-5.citizen-form
+      .col
+        = render 'form'

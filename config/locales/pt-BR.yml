@@ -1,4 +1,24 @@
 pt-BR:
+  date:
+    order: ["day", "month", "year"]
+    month_names:
+      [
+        "Jan",
+        "Fev",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Ago",
+        "Set",
+        "Out",
+        "Nov",
+        "Dez",
+      ]
+
+  invalid: Nao e valido
+  unformatted: Nao segue o formato esperado
   activerecord:
     errors:
       models:

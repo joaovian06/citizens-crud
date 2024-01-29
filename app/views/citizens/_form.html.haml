@@ -1,10 +1,31 @@
-= form_for @citizen do |f|
-  - if @citizen.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@citizen.errors.count, "error")} prohibited this citizen from being saved:"
-      %ul
-        - @citizen.errors.full_messages.each do |message|
-          %li= message
+= simple_form_for @citizen do |f|
+  .row
+    .col-md-6.input
+      = f.input :full_name
+    .col-md-6.input
+      = f.input :email, as: :email
 
-  .actions
-    = f.submit 'Save'
+  .row
+    .col-md-4.input
+      = f.input :cpf
+    .col-md-4.input
+      = f.input :cns
+    .col-md-4.input
+      = f.input :phone_number, as: :tel
+
+  .row
+    .col-md-4.input
+      = f.input :status, collection: citizens_statuses_for_select
+    .col-md-4.input
+      = f.input :birthdate, as: :date, start_year: Date.today.year - 500, end_year: Date.today.year
+    .col-md-4.input
+      = f.input :avatar, as: :file
+
+  .d-flex.flex-row.justify-content-between.mt-5
+    = link_to citizens_path, class: "text-decoration-none" do
+      %button.btn.btn-outline-primary.d-flex.align-items-center
+        = icon("fa-solid", "backward-step", class: "fa-xl me-3")
+        #text.fs-4 Voltar
+
+    = button_tag type: "submit", class: "btn btn-outline-success btn-lg px-4" do
+      = t("simple_form.save")

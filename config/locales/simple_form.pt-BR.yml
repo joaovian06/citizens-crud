@@ -1,7 +1,9 @@
 pt-BR:
   simple_form:
+    and: e
     "yes": "Sim"
     "no": "Nao"
+    save: Salvar
     required:
       text: "required"
       mark: "*"

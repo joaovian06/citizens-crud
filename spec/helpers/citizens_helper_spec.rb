@@ -1,15 +1,9 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the CitizensHelper. For example:
-#
-# describe CitizensHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe CitizensHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "citizens_statuses_for_select" do
+    let(:expected) { [["Ativo", "active"], ["Inativo", "inactive"]] }
+
+    it { expect(citizens_statuses_for_select).to eq(expected) }
+  end
 end
