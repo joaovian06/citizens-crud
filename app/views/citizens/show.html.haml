@@ -1,13 +1,13 @@
 = stylesheet_link_tag("views/citizens/show")
 
-.container-lg.citizen-info.mt-5
+.container-lg.citizen-info.my-5
   .row.my-5
     .col-12
       %h1= @citizen.full_name
 
-  .row
+  .row.mb-5
     .col-xs-12
-      = @citizen.avatar
+      = image_tag @citizen.avatar.profile.url, class: "profile-image"
 
   %hr
 

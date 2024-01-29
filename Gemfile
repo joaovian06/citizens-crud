@@ -48,6 +48,11 @@ gem 'validates-correios-cep'
 gem 'html2haml'
 gem "haml-rails", "~> 2.0"
 
+# This gem provides a simple and extremely flexible way to upload files from Ruby applications.
+# It works well with Rack based web applications, such as Ruby on Rails.
+gem 'carrierwave', '~> 3.0'
+gem "mini_magick"
+
 # Bootstrap 5 ruby gem for Ruby on Rails (Sprockets/Importmaps) and Hanami (formerly Lotus).
 gem 'bootstrap', '~> 5.3.2'
 

@@ -4,6 +4,11 @@
   font-weight: 600;
   font-size: 1.25rem;
 
+  .profile-image {
+    border: 5px solid lightgrey;
+    border-radius: 100%;
+  }
+
   .btn-outline-danger:hover {
     .fa-trash {
       color: #fff !important;
