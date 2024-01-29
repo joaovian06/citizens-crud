@@ -2,3 +2,11 @@ pt-BR:
   citizens:
     index:
       citizens: Cidadaos
+      full_name: Nome completo
+      cpf: CPF
+      birthdate: Data de nascimento
+      phone_number: Número de telefone
+      status: Status
+      cns: CNS (Cartão Nacional de Saúde)
+      email: E-mail
+      actions: Acoes
