@@ -1,4 +1,6 @@
 pt-BR:
+  application:
+    title: Cidadaos
   date:
     order: ["day", "month", "year"]
     month_names:

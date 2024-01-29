@@ -45,7 +45,7 @@
               %td
                 = citizen.phone_number
               %td
-                = citizen.status
+                = Citizen.human_attribute_name("status.#{citizen.status}")
               %td
                 = link_to icon("fa-solid", "magnifying-glass", class: "fa-xl text-success"), citizen
                 = link_to icon("fa-solid", "pen-to-square", class: "fa-xl text-warning"), edit_citizen_path(citizen)

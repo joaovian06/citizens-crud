@@ -12,3 +12,11 @@ pt-BR:
       actions: Acoes
     new:
       new-citizen: Novo cidadao
+    edit:
+      edit-citizen: Editar cidadao
+    create:
+      success: Cidadao criado com sucesso
+      failure: Nao foi possivel criar o cidadao
+    update:
+      success: Cidadao atualizado com sucesso
+      failure: Nao foi possivel atualizar o cidadao
