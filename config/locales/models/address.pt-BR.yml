@@ -3,7 +3,7 @@ pt-BR:
     models:
       address: Endereco
     attributes:
-      address:
+      addresses:
         cep: CEP
         street: Logradouro
         city: Cidade

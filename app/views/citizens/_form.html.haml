@@ -23,7 +23,7 @@
   .row.mt-5
     .col-md-12
       %h3.mb-5= t(".address")
-      #addresses
+      #address
         = f.simple_fields_for :addresses do |address|
           = render 'address_fields', f: address
 

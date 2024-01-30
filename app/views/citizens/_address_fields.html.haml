@@ -1,19 +1,27 @@
 .nested-fields
   .row
     .col-md-3
-      = f.input :cep
+      = f.label t(".cep"), class: "mb-2"
+      = f.input :cep, label: false
     .col-md-3
-      = f.input :street
+      = f.label t(".street"), class: "mb-2"
+      = f.input :street, label: false
     .col-md-3
-      = f.input :city
+      = f.label t(".city"), class: "mb-2"
+      = f.input :city, label: false
     .col-md-3
-      = f.input :uf
+      = f.label t(".uf"), class: "mb-2"
+      = f.input :uf, label: false
+      
   .row
     .col-md-4
-      = f.input :complement
+      = f.label t(".complement"), class: "mb-2"
+      = f.input :complement, label: false
     .col-md-4
-      = f.input :district
+      = f.label t(".district"), class: "mb-2"
+      = f.input :district, label: false
     .col-md-4
-      = f.input :ibge_code
+      = f.label t(".ibge_code"), class: "mb-2"
+      = f.input :ibge_code, label: false
 
 
