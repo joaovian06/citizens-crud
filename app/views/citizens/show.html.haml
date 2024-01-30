@@ -7,7 +7,7 @@
 
   .row.mb-5
     .col-xs-12
-      = image_tag @citizen.avatar.profile.url, class: "profile-image"
+      = image_tag @citizen.avatar.profile.url, class: "profile-image" if @citizen.avatar.profile.url
 
   %hr
 

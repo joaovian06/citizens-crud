@@ -64,6 +64,10 @@ gem "font-awesome-sass", "~> 6.1.1"
 # Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
 gem 'simple_form'
 
+# Nested forms are forms that handle nested models and attributes in one form;
+gem "cocoon"
+gem 'jquery-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

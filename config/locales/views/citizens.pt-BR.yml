@@ -10,6 +10,17 @@ pt-BR:
       cns: CNS (Cartão Nacional de Saúde)
       email: E-mail
       actions: Acoes
+
+    form:
+      address: Endereco
+    address_fields:
+      cep: CEP
+      street: Logradouro
+      city: Cidade
+      uf: UF
+      complement: Complemento
+      district: Bairro
+      ibge_code: Codigo IBGE
     new:
       new-citizen: Novo cidadao
     edit:

@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      address: Endereco
+    attributes:
+      addresses:
+        cep: CEP
+        street: Logradouro
+        city: Cidade
+        uf: UF
+        complement: Complemento
+        district: Bairro
+        ibge_code: Codigo IBGE

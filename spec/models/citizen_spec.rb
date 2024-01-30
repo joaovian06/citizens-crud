@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Citizen, type: :model do
-  let(:subject) { create(:citizen) }
-
   context "db" do
     context "columns" do
       it { is_expected.to have_db_column(:full_name) }
@@ -24,15 +22,20 @@ RSpec.describe Citizen, type: :model do
   end
 
   context "associations" do
+    let(:subject) { create(:citizen) }
+
     it { is_expected.to have_one(:address) }
+    it { is_expected.to accept_nested_attributes_for(:address) }
   end
 
   context "enum" do
     it { is_expected.to define_enum_for(:status).with_values(active: 0, inactive: 1) }
   end
 
-  context "factory" do
+  context "factory" do  
     context "valid" do
+      let(:subject) { create(:citizen) }
+  
       it { is_expected.to be_valid }
     end
 
@@ -51,7 +54,6 @@ RSpec.describe Citizen, type: :model do
 
       it { is_expected.to validate_presence_of(:phone_number) }
       it { is_expected.to validate_presence_of(:status) }
-      it { is_expected.to validate_presence_of(:avatar) }
     end
 
     context "phone number" do

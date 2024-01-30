@@ -20,6 +20,12 @@
       = f.input :birthdate, as: :date, start_year: Date.today.year - 500, end_year: Date.today.year
     .col-md-4.input
       = f.input :avatar, as: :file
+  .row.mt-5
+    .col-md-12
+      %h3.mb-5= t(".address")
+      #address
+        = f.simple_fields_for :addresses do |address|
+          = render 'address_fields', f: address
 
   .d-flex.flex-row.justify-content-between.mt-5
     = link_to citizens_path, class: "text-decoration-none" do
