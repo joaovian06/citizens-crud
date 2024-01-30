@@ -1,0 +1,12 @@
+pt-BR:
+  addresses:
+    index:
+      addresses: Cidadaos
+      cep: CEP
+      street: Logradouro
+      city: Cidade
+      uf: UF
+      complement: Complemento
+      district: Bairro
+      ibge_code: Codigo IBGE
+      actions: Acoes

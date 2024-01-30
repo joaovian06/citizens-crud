@@ -8,6 +8,7 @@ FactoryBot.define do
     phone_number { "5519999999999" }
     avatar { "MyString" }
     status { %w(active inactive).sample }
+    address
 
     trait :invalid_citizen do
       full_name { nil }

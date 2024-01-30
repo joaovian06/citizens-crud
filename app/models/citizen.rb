@@ -3,13 +3,14 @@ class Citizen < ApplicationRecord
     NOT_FORMATTED_PHONE_REGEX = %r(\A(\d{2})(\d{2})(\d{4,5})(\d{4})\z)
 
     has_one :address
+
+    accepts_nested_attributes_for :address
     
     before_save :format_cpf
     before_validation :format_phone
 
     validates :birthdate,
               :status,
-              :avatar,
               :phone_number,
               presence: true
 
